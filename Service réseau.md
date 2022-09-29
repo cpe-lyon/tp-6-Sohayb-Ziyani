@@ -102,3 +102,7 @@ On peut voir que le serveur est bien actif
 ![image](https://user-images.githubusercontent.com/80455771/193055668-1dd946f4-da3a-492f-a256-cb40f244fdc7.png)
 
 ### 6. 
+
+Renommage de la machine client : 
+
+![image](https://user-images.githubusercontent.com/80455771/193061403-e8a548e4-8f95-4687-b90e-54bc08053a01.png)
