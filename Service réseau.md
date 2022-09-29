@@ -68,3 +68,37 @@ Désinstallation du paquet sur le client avec la commande `apt remove could-init
 On modifie le nom de la machine avec la commande `hostanmectl` :
 
 ![image](https://user-images.githubusercontent.com/80455771/193036720-48a8b231-3c6a-432f-ac96-7b6929b2a271.png)
+
+## Exercice 3. Installation du serveur DHCP
+
+### 1. Sur le serveur, installez le paquet isc-dhcp-server. La commande systemctl status isc dhcp-server devrait vous indiquer que le serveur n’a pas réussi à démarrer, ce qui est normal puisqu’il n’est pas encore configuré (en particulier, il n’a pas encore d’adresses IP à distribuer).
+
+On peut voir qu'il y a bien une erreur :
+
+![image](https://user-images.githubusercontent.com/80455771/193038369-93d445d5-3acd-446a-8165-b54f3888330e.png)
+
+### 2. Un serveur DHCP a besoin d’une IP statique. Attribuez de manière permanente l’adresse IP 192.168.100.1 à l’interface réseau du réseau interne. Vérifiez que la configuration est correcte.
+
+Avec les différentes commande on attribue une IP fixe au serveur DHCP :
+
+![image](https://user-images.githubusercontent.com/80455771/193046439-364f19f5-5f8d-42e1-a285-6737ca3fed3c.png)
+
+### 3. La configuration du serveur DHCP se fait via le fichier /etc/dhcp/dhcpd.conf. Faites une sauvegarde du fichier existant sous le nom dhcpd.conf.bak puis éditez le fichier dhcpd.conf avec les informations suivantes :
+
+Modification du fichier `dhcpd.conf.bak` :
+
+![image](https://user-images.githubusercontent.com/80455771/193048668-b111eade-588d-4f4f-b5e7-0abd3610b943.png)
+
+`Default-lease-time` est le temps par défault pendant lequel la machine peut garder l'adresse IP et `max-lease-time` est son maximum 
+
+### 4. Editez le fichier /etc/default/isc-dhcp-server afin de spécifier l’interface sur laquelle le serveur doit écouter
+
+![image](https://user-images.githubusercontent.com/80455771/193051052-4539a543-8274-4f6f-8d11-fef1bc2540a8.png)
+
+### 5. Validez votre fichier de configuration avec la commande dhcpd -t puis redémarrez le serveur DHCP (avec la commande systemctl restart isc-dhcp-server) et vérifiez qu’il est actif.
+
+On peut voir que le serveur est bien actif
+
+![image](https://user-images.githubusercontent.com/80455771/193055668-1dd946f4-da3a-492f-a256-cb40f244fdc7.png)
+
+### 6. 
