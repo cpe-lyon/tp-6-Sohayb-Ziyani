@@ -117,4 +117,31 @@ Voici ce qu'on obtient avec la commande `tail -f /var/log/syslog` :
 
 ![image](https://user-images.githubusercontent.com/80455771/193458746-fd38faea-0acb-4ad6-87f8-b2d1aaf15a36.png)
 
-DHCPDISCOVER correspong au message du client pour voir s'il y a bien un serveur DHCP disponible sur le réseau et avoir sa première configuration, DHCPOFFER est la réponse du serveur au message du client avec les premiers paramètres, DHCPREQUEST est une réquête du client pour nimporte quel bail, DHCPACK est la réponse du serveur qui contient l'adresse IP du client
+DHCPDISCOVER correspong au message du client pour voir s'il y a bien un serveur DHCP disponible sur le réseau et avoir sa première configuration, DHCPOFFER est la réponse du serveur au message du client avec les premiers paramètres, DHCPREQUEST est une réquête du client pour nimporte quel bail, DHCPACK est la réponse du serveur qui contient l'adresse IP du client.
+
+### 8. Que contient le fichier /var/lib/dhcp/dhcpd.leases sur le serveur, et qu’afficle la commande dhcp-lease-list ?
+
+Le fichier dhcpd.leases stocke automatiquement les informations d'attribution des IP 
+
+La commande `dhcp-lease-list` affiche les informations des différents client à qui on a attribué une addresse IP dans notre cas qu'une seule ligne :
+
+![image](https://user-images.githubusercontent.com/80455771/193460226-575707a3-f1f9-435f-85f8-2d8d52646e4a.png)
+
+### 9. Vérifiez que les deux machines peuvent communiquer via leur adresse IP, à l’aide de la commande ping
+
+Le ping marche
+
+![image](https://user-images.githubusercontent.com/80455771/193460303-c2b8b90a-cf7f-4e4f-ab6b-50992cc13cf0.png)
+
+### 10. Modifiez la configuration du serveur pour que l’interface réseau du client reçoive l’IP statique 192.168.100.20 
+
+On effectue les changements dans le fichier conf du serveur :
+
+![image](https://user-images.githubusercontent.com/80455771/193461743-b3c6a223-78f0-472e-bac0-0c16ed40eadb.png)
+
+Et on peut voir quel la machine cliente a bien reçu son IP fixe : 
+
+![image](https://user-images.githubusercontent.com/80455771/193461724-175eeda0-3999-4208-83f1-452dd3140374.png)
+
+## Exercice 4. Donner un accès à Internet au client
+
