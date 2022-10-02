@@ -217,5 +217,7 @@ On peut voir que tous les fichiers sont bons :
 
 On peut ping les différentes machines sur le réseau et dans ce cas un autre serveur sur le réseau :
 
+![image](https://user-images.githubusercontent.com/80455771/193470668-d5e544a6-1dfe-464f-9d0a-cc6f4771369a.png)
+
 ![image](https://user-images.githubusercontent.com/80455771/193470501-de33326d-7c17-4b9c-9a2c-ff5e2325bfc1.png)
 
