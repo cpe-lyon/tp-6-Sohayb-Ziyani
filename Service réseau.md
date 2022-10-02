@@ -5,29 +5,29 @@
 On a 7 sous-réseaux et le sous-réseau avec le plus grand nombres d'hôtes est le 3 (52 hôtes) donc il faut se baser sur ce dernier pour commencer le VLSM. 
 On a donc besoin d'un /26 puisque 2^6 - 2 = 62 hôtes : 
 
-- 172.16.0.0/26 -> sous réseaux 3 (52 machines)\n
-adresse de broadcast : 172.16.0.63/26
-première adresse : 172.16.0.1/26
-dernière adresse : 172.16.0.62/26
-- 172.16.0.64/26 -> sous réseaux 1 (38 machines)
-adresse de broadcast : 172.16.0.127/26
-première adresse : 172.16.0.65/26
-dernière adresse : 172.16.0.126/26
-- 172.16.0.128/26 -> sous réseaux 6 (37 machines)
-adresse de broadcast : 172.16.0.191/26
-première adresse : 172.16.0.129/26
-dernière adresse : 172.16.0.190/26
-- 172.16.0.192/26 -> sous réseaux 4 (35 machines)
-adresse de broadcast : 172.16.0.255/26
-première adresse : 172.16.0.193/26
-dernière adresse : 172.16.0.254/26
-- 172.16.1.0/26 -> sous réseaux 5 (34 machines)
-adresse de broadcast : 172.16.1.63/26
-première adresse : 172.16.1.1/26
-dernière adresse : 172.16.1.62/26
-- 172.16.1.64/26 -> sous réseaux 2 (33 machines)
-adresse de broadcast : 172.16.1.127/26
-première adresse : 172.16.1.65/26
+- 172.16.0.0/26 -> sous réseaux 3 (52 machines) /
+adresse de broadcast : 172.16.0.63/26 /
+première adresse : 172.16.0.1/26 /
+dernière adresse : 172.16.0.62/26 //
+- 172.16.0.64/26 -> sous réseaux 1 (38 machines) /
+adresse de broadcast : 172.16.0.127/26 /
+première adresse : 172.16.0.65/26 /
+dernière adresse : 172.16.0.126/26 //
+- 172.16.0.128/26 -> sous réseaux 6 (37 machines) /
+adresse de broadcast : 172.16.0.191/26 /
+première adresse : 172.16.0.129/26 /
+dernière adresse : 172.16.0.190/26 //
+- 172.16.0.192/26 -> sous réseaux 4 (35 machines) /
+adresse de broadcast : 172.16.0.255/26 /
+première adresse : 172.16.0.193/26 /
+dernière adresse : 172.16.0.254/26 //
+- 172.16.1.0/26 -> sous réseaux 5 (34 machines) /
+adresse de broadcast : 172.16.1.63/26 /
+première adresse : 172.16.1.1/26 /
+dernière adresse : 172.16.1.62/26 //
+- 172.16.1.64/26 -> sous réseaux 2 (33 machines) /
+adresse de broadcast : 172.16.1.127/26 /
+première adresse : 172.16.1.65/26 /
 dernière adresse : 172.16.1.126/26
 
 Pour le dernier sous-réseau nous n'avons plus besoin d'un /26 mais d'un /27 puisque 2^5 - 2 = 30 hôtes : 
