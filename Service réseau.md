@@ -110,3 +110,11 @@ On peut voir que le serveur est bien actif
 Renommage de la machine client : 
 
 ![image](https://user-images.githubusercontent.com/80455771/193061403-e8a548e4-8f95-4687-b90e-54bc08053a01.png)
+
+### 7. La commande tail -f /var/log/syslog affiche de manière continue les dernières lignes du fichier de log du système (dès qu’une nouvelle ligne est écrite à la fin du fichier, elle est affichée à l’écran). Lancez cette commande sur le serveur, puis connectez la carte réseau du client et observez les logs sur le serveur. Expliquez à quoi correspondent les messages DHCPDISCOVER, DHCPOFFER, DHCPREQUEST, DHCPACK. Vérifiez que le client reçoit bien une adresse IP de la plage spécifiée précédemment.
+
+Voici ce qu'on obtient avec la commande `tail -f /var/log/syslog` : 
+
+![image](https://user-images.githubusercontent.com/80455771/193458746-fd38faea-0acb-4ad6-87f8-b2d1aaf15a36.png)
+
+DHCPDISCOVER correspong au message du client pour voir s'il y a bien un serveur DHCP disponible sur le réseau et avoir sa première configuration, DHCPOFFER est la réponse du serveur au message du client avec les premiers paramètres, DHCPREQUEST est une réquête du client pour nimporte quel bail, DHCPACK est la réponse du serveur qui contient l'adresse IP du client
