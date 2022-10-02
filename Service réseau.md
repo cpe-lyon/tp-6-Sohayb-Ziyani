@@ -161,4 +161,47 @@ Et on voit que le client ping bien à l'éxterieur et on prend par exemple 1.1.1
 
 ![image](https://user-images.githubusercontent.com/80455771/193465473-f416a865-9c92-46f4-84a1-5d498aeff41e.png)
 
+## Exercice 5. Istallation du serveur DNS
+
+### 2. Nous allons donc modifier son fichier de configuration : /etc/bind/named.conf.options. Dans ce fichier, décommentez la partie forwarders, et à la place de 0.0.0.0, renseignez les IP de DNS publics comme 1.1.1.1 et 8.8.8.8 (en terminant à chaque fois par un point virgule). Redémarrez le serveur bind9
+
+Décommentation et on ajoute les IPs de DNS :
+
+![image](https://user-images.githubusercontent.com/80455771/193465815-1e28ada1-701f-477e-b97a-e74c38a5ff6b.png)
+
+### 3. Sur le client, retentez un ping sur www.google.fr. Cette fois ça devrait marcher ! On valide ainsi la configuration du DHCP effectuée précédemment, puisque c’est grâce à elle que le client a trouvé son serveur DNS.
+
+On peut voir que le ping vers google marche bien : 
+
+![image](https://user-images.githubusercontent.com/80455771/193466153-650399c7-5e1d-453b-9966-72c00b49f98c.png)
+
+### 4. Sur le client, installez le navigateur en mode texte lynx et essayez de surfer sur fr.wikipedia.org (bienvenue dans le passé...)
+
+Après avoir installer le paquet Lynx avec la commande `apt install lynx` et fait une recherche avec la commande `lynx fr.wikipédia.org` on tombe sur ça :
+
+![image](https://user-images.githubusercontent.com/80455771/193466411-876fdc00-741c-4289-9440-3cdedf7e9e40.png)
+
+## Exercice 6. Configuration du serveur DNS pour la zone tpadmin.local
+
+### 1. Modifiez le fichier /etc/bind/named.conf.local et ajoutez les lignes suivantes 
+
+Modification du fichier : 
+
+![image](https://user-images.githubusercontent.com/80455771/193466637-7983cc7f-8e53-4e99-ac04-61eb2488c942.png)
+
+### 2. Créez une copie appelée db.tpadmin.local du fichier db.local. Ce fichier est un fichier configuration typique de DNS, constitué d’enregistrements DNS (cf. cours). Dans le nouveau fichier, remplacez toutes les références à localhost par tpadmin.local, et l’adresse 127.0.0.1 par l’adresse IP du serveur.
+
+On effectue les remplacements dans le fichier : 
+
+![image](https://user-images.githubusercontent.com/80455771/193467098-0894d037-46b1-420d-b0b3-93c78ca3db12.png)
+
+### 3. Maintenant que nous avons configuré notre fichier de zone, il reste à configurer le fichier de zone inverse, qui permet de convertir une adresse IP en nom.
+
+Modification du fichier `named.conf.local` :
+
+![image](https://user-images.githubusercontent.com/80455771/193467213-d5c54d13-c15d-49aa-8271-729e5e87881b.png)
+
+
+
+
 
