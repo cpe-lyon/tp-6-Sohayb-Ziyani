@@ -193,7 +193,7 @@ Modification du fichier :
 
 On effectue les remplacements dans le fichier : 
 
-![image](https://user-images.githubusercontent.com/80455771/193467098-0894d037-46b1-420d-b0b3-93c78ca3db12.png)
+![image](https://user-images.githubusercontent.com/80455771/193469434-5cfd0d56-0b08-41a3-a259-f5e6975fd0db.png)
 
 ### 3. Maintenant que nous avons configuré notre fichier de zone, il reste à configurer le fichier de zone inverse, qui permet de convertir une adresse IP en nom.
 
@@ -201,6 +201,9 @@ Modification du fichier `named.conf.local` :
 
 ![image](https://user-images.githubusercontent.com/80455771/193467213-d5c54d13-c15d-49aa-8271-729e5e87881b.png)
 
+Création du fichier db.192.168.100 et sa modification :
+
+![image](https://user-images.githubusercontent.com/80455771/193469364-68b3420b-cd5a-4d20-93df-dae1780c2624.png)
 
 
 
