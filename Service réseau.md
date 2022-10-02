@@ -5,7 +5,7 @@
 On a 7 sous-réseaux et le sous-réseau avec le plus grand nombres d'hôtes est le 3 (52 hôtes) donc il faut se baser sur ce dernier pour commencer le VLSM. 
 On a donc besoin d'un /26 puisque 2^6 - 2 = 62 hôtes : 
 
-- 172.16.0.0/26 -> sous réseaux 3 (52 machines)
+- 172.16.0.0/26 -> sous réseaux 3 (52 machines)\n
 adresse de broadcast : 172.16.0.63/26
 première adresse : 172.16.0.1/26
 dernière adresse : 172.16.0.62/26
