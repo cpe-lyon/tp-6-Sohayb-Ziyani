@@ -145,3 +145,20 @@ Et on peut voir quel la machine cliente a bien reçu son IP fixe :
 
 ## Exercice 4. Donner un accès à Internet au client
 
+### 1. La première chose à faire est d’autoriser l’IP forwarding sur le serveur (désactivé par défaut, étant donné que la plupart des utilisateurs n’en ont pas besoin). Pour cela, il suffit de décommenter la ligne net.ipv4.ip_forward=1 dans le fichier /etc/sysctl.conf. Pour que les changements soient pris en compte immédiatement, il faut saisir la commande sudo sysctl -p /etc/sysctl.conf.
+
+Décommentation de la ligne : 
+
+![image](https://user-images.githubusercontent.com/80455771/193464908-953f10a0-6d7e-4a71-b6b2-78984f079c26.png)
+
+### 2. Ensuite, il faut autoriser la traduction d’adresse source (masquerading) en ajoutant la règle iptables suivante :
+
+On tape la commande en indiquant le bon port : 
+
+![image](https://user-images.githubusercontent.com/80455771/193465437-8b493ff1-ec0b-475d-bdd3-3b8f5a54f986.png)
+
+Et on voit que le client ping bien à l'éxterieur et on prend par exemple 1.1.1.1 :
+
+![image](https://user-images.githubusercontent.com/80455771/193465473-f416a865-9c92-46f4-84a1-5d498aeff41e.png)
+
+
