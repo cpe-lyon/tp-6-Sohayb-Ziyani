@@ -79,9 +79,13 @@ On peut voir qu'il y a bien une erreur :
 
 ### 2. Un serveur DHCP a besoin d’une IP statique. Attribuez de manière permanente l’adresse IP 192.168.100.1 à l’interface réseau du réseau interne. Vérifiez que la configuration est correcte.
 
-Avec les différentes commande on attribue une IP fixe au serveur DHCP :
+Dans le fichier `etc/netplan/50-cloud-init.yaml` on ajoute quelques lignes pour mettre notre serveur en IP fixe : 
 
-![image](https://user-images.githubusercontent.com/80455771/193046439-364f19f5-5f8d-42e1-a285-6737ca3fed3c.png)
+![image](https://user-images.githubusercontent.com/80455771/193457779-5bf533b9-8d14-4564-bb09-1596bd9cb673.png)
+
+et on peut ensuite voir que le changement a bien été fait : 
+
+![image](https://user-images.githubusercontent.com/80455771/193457802-cdf4b796-f41f-41fd-9aba-38dfecd57bf7.png)
 
 ### 3. La configuration du serveur DHCP se fait via le fichier /etc/dhcp/dhcpd.conf. Faites une sauvegarde du fichier existant sous le nom dhcpd.conf.bak puis éditez le fichier dhcpd.conf avec les informations suivantes :
 
