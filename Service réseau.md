@@ -205,8 +205,17 @@ Création du fichier db.192.168.100 et sa modification :
 
 ![image](https://user-images.githubusercontent.com/80455771/193469364-68b3420b-cd5a-4d20-93df-dae1780c2624.png)
 
+### 4. Utilisez les utilitaires named-checkconf et named-checkzone pour valider vos fichiers de configuration :
 
+On peut voir que tous les fichiers sont bons : 
 
+![image](https://user-images.githubusercontent.com/80455771/193469766-25111770-6bee-473d-a6c0-bfa11a7edf60.png)
 
+![image](https://user-images.githubusercontent.com/80455771/193470397-d1fa133b-6582-43ca-81bb-4229fedd2caf.png)
 
+### 5. Redémarrer le serveur Bind9. Vous devriez maintenant être en mesure de « pinguer »les différentes machines du réseau
+
+On peut ping les différentes machines sur le réseau et dans ce cas un autre serveur sur le réseau :
+
+![image](https://user-images.githubusercontent.com/80455771/193470501-de33326d-7c17-4b9c-9a2c-ff5e2325bfc1.png)
 
