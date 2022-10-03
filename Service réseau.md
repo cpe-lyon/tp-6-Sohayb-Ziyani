@@ -215,9 +215,10 @@ On peut voir que tous les fichiers sont bons :
 
 ### 5. Redémarrer le serveur Bind9. Vous devriez maintenant être en mesure de « pinguer »les différentes machines du réseau
 
-On peut ping les différentes machines sur le réseau et dans ce cas un autre serveur sur le réseau :
+On peut ping les différentes machines sur le réseau et dans ce cas du client vers le serveur et vice versa :
 
-![image](https://user-images.githubusercontent.com/80455771/193470668-d5e544a6-1dfe-464f-9d0a-cc6f4771369a.png)
+![image](https://user-images.githubusercontent.com/80455771/193559714-384c4d82-9014-4a2e-bbb1-01e450f6306d.png)
 
-![image](https://user-images.githubusercontent.com/80455771/193470501-de33326d-7c17-4b9c-9a2c-ff5e2325bfc1.png)
+![image](https://user-images.githubusercontent.com/80455771/193559750-d71a66b9-82c1-4d08-adb7-a42a9b207f97.png)
+
 
